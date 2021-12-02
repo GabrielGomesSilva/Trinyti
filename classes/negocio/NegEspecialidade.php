@@ -13,28 +13,28 @@
             return $objEspecialidade;
         }
 
-        private function consultarMedico($dadosFiltro) {
-            $dadosFiltroConsulta = $this->trataConsulta($dadosFiltro);        
+        private function consultarEspecialidade($dadosFiltro) {
+            $dadosFiltroConsulta = $this->trataEspecialidade($dadosFiltro);        
             $objRepoEspecialidade = new RepoEspecialidade();
             $arrDadosEspecialidade = $objRepoEspecialidade->listar($dadosFiltroConsulta);         
             $listaObjEspecialidade=null;
             if($arrDadosEspecialidade>0){
-                foreach ($arrDadosEspecialidade as $dadoMedico) {
-                    $listaObjMedico[] = $this->factory($dadoMedico);
+                foreach ($arrDadosEspecialidade as $dadoEspecialidade) {
+                    $listaObjMedico[] = $this->factory($dadoEspecialidade);
                 }
             }
             return $listaObjMedico;
         }
         
-        public function listarMedico($dadosFiltro){      
-            $listaEspecialidade = $this->consultarMedico($dadosFiltro);
+        public function listarEspecialidade($dadosFiltro){      
+            $listaEspecialidade = $this->consultarEspecialidade($dadosFiltro);
             foreach($listaEspecialidade as $objlista){  
             $htmlRetorno = $objlista->getIdespecialidade();
         }
             return $htmlRetorno;
         }
         
-        private function trataConsulta($dadosFiltro){
+        private function trataEspecialidade($dadosFiltro){
             $dadosFiltroConsulta=null;
             if(isset($dadosFiltro["id"])){
                 if($dadosFiltro["id"]>0){

@@ -105,12 +105,10 @@ function listarMedico(){
 }
 
 function listarEspecialidade(){        
-    //var nome  = $("input[name='nomeConsulta']").val();
-    //var crm  = $("input[name='crmConsulta']").val();
     $.ajax({
         type: 'POST',
         url: "controladores/IndexControlador.php",
-        data: {ACO_Descricao: 'Listar1', nome: nome},
+        data: {ACO_Descricao: 'ListarEspecialidade', nome: nome},
         dataType: 'json',
         async: false, // assincrono / nÃ£o assincrono
         encode: true,
@@ -221,10 +219,7 @@ function cancelar(){
 }
 
 function excluir(objEntrada){
-    //var obj = JSON.parse(objEntrada); 
-    //console.log(objEntrada);    
-      
-    //$("input[name='id']").val(obj.id);
+   
 }
 
 

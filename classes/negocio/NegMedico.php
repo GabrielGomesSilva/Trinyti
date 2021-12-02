@@ -96,7 +96,7 @@ class NegMedico {
                 }
             }else{
                 $htmlRetorno .= '<tr>';
-                    $htmlRetorno .= '<td colspan="5">Nenhum médico encontrado!</td>';            
+                    $htmlRetorno .= '<td colspan="6">Nenhum médico encontrado!</td>';            
                 $htmlRetorno .= '</tr>';
             }
             $htmlRetorno .= '</tbody>';

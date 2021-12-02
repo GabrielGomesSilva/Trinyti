@@ -20,8 +20,8 @@ class Medico{
     }
     
     function getIdespecialidade() {
-        $objespecialidade = new Especialidade();
-        $objespecialidade->getDescricao();
+        //$objespecialidade = new Especialidade();
+        //$objespecialidade->getDescricao();
         return $this->idespecialidade;
     }
 

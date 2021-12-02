@@ -56,9 +56,9 @@
                     $arrStrJson["msgOp"]="";
                     $arrStrJson["html"] = $htmlRetorno;
                     $arrStrJson["statusOp"] = "true";                        
-                }elseif($strAcao == "Listar1"){                                        
+                }elseif($strAcao == "ListarEspecialidade"){                                        
                     $objNegMedico = new NegEspecialidade();
-                    $htmlRetorno = $objNegMedico->listarMedico($_POST);
+                    $htmlRetorno = $objNegMedico->listarEspecialidade($_POST);
                     $arrStrJson["msgOp"]="";
                     $arrStrJson["html"] = $htmlRetorno;
                     $arrStrJson["statusOp"] = "true";                        

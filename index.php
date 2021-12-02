@@ -16,16 +16,10 @@ Sobre a pagina web:
 7- Colocar uma máscara no campo de telefone que se adeque aos tipos de telefones atuais ex: (81)99874-6354 e (81)3535-0135  (Corrigido)
 8- Observe que no banco existe uma tabela de "especialidade" é preciso fazer uma ligação com esta tabela e a tabela de médico.
 É preciso alterar a aba de cadastro para que a "especialidade" seja listada em input do tipo select e que seja levada em conta
-no momento do registrar o médico.
+no momento do registrar o médico. (Não consegui terminar tudo)
 -->
 <?php 
 
-        /*$this->db = DbMysql::select();
-        $teste = DbMysql::select();
-
-        $aaa = $teste->query('SELECT * FROM especialidade');
-        var_dump($aaa); */
-    
 
 ?>
 <!doctype html>
@@ -64,7 +58,7 @@ no momento do registrar o médico.
             <h2 class="text-center">Cadastro de Médico</h2>
             
             <ul id="myTab" class="nav nav-tabs">
-                <li class="active"><a href="#tab1" data-toggle="tab">Médicos Cadastradas</a></li>
+                <li class="active"><a href="#tab1" data-toggle="tab">Médicos Cadastrados</a></li>
                 <li><a href="#tab2" data-toggle="tab">Novo Cadastro*</a></li>
             </ul>
             <div class="tab-content">
@@ -140,12 +134,12 @@ no momento do registrar o médico.
                                         <div class="col-sm-10">
 
                                         <select class="form-control" name="idespecialidade" id="idespecialidade">
-                                       <!-- foreach($htmlRetorno as $htmlRetorno1) {  ?>
-                                        <$htmlRetorno1['descricao'];?>
-                                        < var_dump($aaa);}-->
-                                            <option  value="otorrino">otorrino</option>
-                                            <option value="Dentista" selected>Dentista</option>
-                                            <option value="Cerugiao">Cerugião</option>
+                                       <!-- foreach($especialidade as $especialidades) {  ?>
+                                        <$especialidades['descricao'];?>
+                                        < var_dump($a);}-->
+                                            <option  value="Otorrinolaringologista">Otorrinolaringologista</option>
+                                            <option value="Pediatra" selected>Pediatra</option>
+                                            <option value="Cirurgião">Cirurgião</option>
                                             
                                         </select>
                                         </div>
